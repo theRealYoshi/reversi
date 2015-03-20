@@ -26,7 +26,8 @@ var rlInterface;
 Game.prototype.play = function () {
   rlInterface = readline.createInterface({
     input: process.stdin,
-    output: process.stdout
+    output: process.stdout,
+    terminal: false
   });
 
   this.runLoop(function () {
@@ -50,7 +51,7 @@ Game.prototype.playTurn = function (callback) {
     var pos = JSON.parse(answer);
     if (!this.board.validMove(pos, this.turn)) {
       console.log("Invalid move!");
-      this.playTurn();
+      this.playTurn(callback);
       return;
     }
 
