@@ -4,7 +4,7 @@ var Piece = require("./piece");
  * Returns a 2D array (8 by 8) with two black pieces at [3, 4] and [4, 3]
  * and two white pieces at [3, 3] and [4, 4]
  */
-function _makeGrid () {
+function _makeGrid() {
   var grid = [];
 
   for (var i = 0; i < 8; i++) {
@@ -97,7 +97,7 @@ Board.prototype.isValidPos = function (pos) {
  *
  * Returns null if no pieces of the opposite color are found.
  */
-function _positionsToFlip (board, pos, color, dir, piecesToFlip) {
+function _positionsToFlip(board, pos, color, dir, piecesToFlip) {
   if (!piecesToFlip) {
     piecesToFlip = [];
   } else {
