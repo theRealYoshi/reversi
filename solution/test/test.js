@@ -157,7 +157,7 @@ describe("Board", function () {
     });
 
     it("should not allow a piece on top of another piece", function () {
-      function makeBadMove () {
+      function makeBadMove() {
         testBoard.placePiece([3, 2], "white");
       }
 
@@ -165,7 +165,7 @@ describe("Board", function () {
     });
 
     it("should not allow a move that doesn't capture", function () {
-      function makeBadMove () {
+      function makeBadMove() {
         testBoard.placePiece([2, 3], "white");
       }
 
@@ -173,7 +173,7 @@ describe("Board", function () {
     });
 
     it("should not allow moves that isolate pieces", function () {
-      function makeOtherBadMove () {
+      function makeOtherBadMove() {
         testBoard.placePiece([0, 0], "white");
       }
 

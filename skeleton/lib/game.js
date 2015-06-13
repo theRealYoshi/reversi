@@ -47,7 +47,7 @@ Game.prototype.playTurn = function (callback) {
     handleResponse.bind(this)
   );
 
-  function handleResponse (answer) {
+  function handleResponse(answer) {
     var pos = JSON.parse(answer);
     if (!this.board.validMove(pos, this.turn)) {
       console.log("Invalid move!");
